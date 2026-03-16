@@ -91,15 +91,15 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="flex-1 flex justify-center md:justify-end"
         >
-          <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-[6px] border-white shadow-xl shadow-slate-200 group">
-            {/* Inner heavy blur mask to hide edges */}
-            <div className="absolute inset-0 z-10 rounded-full shadow-[inset_0_0_60px_rgba(255,255,255,1)] pointer-events-none mix-blend-screen" />
+          <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-[8px] border-white shadow-xl shadow-slate-200/50 group hover:shadow-2xl hover:shadow-slate-300/50 hover:-translate-y-2 transition-all duration-500">
             <Image 
-               src="/profile.jpg" 
+               src="/new-profile.jpg" 
                alt="Feeza Bathul PV" 
                fill 
-               className="object-cover object-[center_top] scale-[1.75] translate-y-[15%] transition-transform duration-700 group-hover:scale-[1.9]"
+               className="object-cover object-center transition-transform duration-700 group-hover:scale-110"
                priority
+               sizes="(max-width: 768px) 288px, 384px"
+               quality={90}
             />
           </div>
         </motion.div>
